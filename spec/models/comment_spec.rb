@@ -6,7 +6,7 @@ RSpec.describe Comment, type: :model do
 
   describe "attributes" do
     it "should respond to body" do
-      expect(response).to respond_to(:body)
+      expect(comment).to respond_to(:body)
     end
   end
 end
