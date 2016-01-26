@@ -13,11 +13,11 @@ class SessionsController < ApplicationController
       flash.now[:alert] = 'Invalid email/password combination'
       render :new
     end
+  end
 
-    def destroy
-      destroy_session(current_user)
-      flash[:notice] = "You've been signed out, come back soon!"
-      redirect_to root_path
-    end
+  def destroy
+    destroy_session(current_user)
+    flash[:notice] = "You've been signed out, come back soon!"
+    redirect_to root_path
   end
 end
